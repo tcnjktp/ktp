@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+# About Us
 
-You can use the [editor on GitHub](https://github.com/tcnjktp/kappathetapi/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Kappa Theta Pi(KTP) is the professional technology fraternity of TCNJ. We are a co-ed fraternity and strive towards spreading the love for technology around campus. Membership is open to students of any major at TCNJ.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  
+# Our Mission
 
-### Markdown
+KTP is focused on promoting the love of technology and our philanthropy throughout the TCNJ community as well as promoting professional, social, and technical developments of our members.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+# Student Executive Board
 
 ```markdown
-Syntax highlighted code block
+President - Svanik Shirodkar
+  
+Vice President - Sarah Lim
+  
+Treasurer - Michael Mongelli
+  
+Director of Engagement - Sabrina May
+  
+Director of Technology - Jason Chen
 
-# Header 1
-## Header 2
-### Header 3
+Director of Professional Development - Jonathan DellaGatta
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Director of Membership - Tooba Bajwa
+  
+Fundraising Chair - Jabili Gadde
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+# Recruitment Info
 
-### Jekyll Themes
+Kappa Theta Pi is recruiting new members this fall and plan to host events that allow our potential members to connect with our current members to find out more about the values and mission of KTP.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/tcnjktp/kappathetapi/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+**Important Dates:**
 
-### Support or Contact
+![image](https://user-images.githubusercontent.com/43418785/90972461-2a829280-e4e7-11ea-9b75-3a88d9aaff0a.png)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+# Connect with us!
+
+Email: ktp@tcnj.edu  
+[Our Instagram](https://instagram.com/ktp_tcnj)
