@@ -1,6 +1,6 @@
 # About Us
 
-Kappa Theta Pi(KTP) is the professional technology fraternity of TCNJ. We are a co-ed fraternity and strive towards spreading the love for technology around campus. Membership is open to students of any major at TCNJ.
+Kappa Theta Pi is the professional technology fraternity of TCNJ. We are a co-ed fraternity and strive towards spreading the love for technology around campus. Membership is open to students of any major at TCNJ.
 
   
 # Our Mission
