@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
 title: Kappa Theta Pi
 description: Professional Tech Fraternity
+github: 
+  is_project_page: false
