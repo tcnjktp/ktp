@@ -1707,3 +1707,11 @@ h1, h2, h3, h4 {
 #footer .credits a:hover {
   color: var(--secondary-medium);
 }
+
+.square-rounded {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* This will maintain the aspect ratio */
+  object-fit: cover; /* This will ensure the image covers the area without stretching */
+  border-radius: 10px; /* Adjust the border-radius as needed for rounded corners */
+}
+
