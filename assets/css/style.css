@@ -1709,8 +1709,8 @@ h1, h2, h3, h4 {
 }
 
 .square-rounded {
-  width: 100%; /* Adjust the width as needed */
-  height: auto; /* This will maintain the aspect ratio */
+  width: 150px; 
+  height: 150px;
   object-fit: cover; /* This will ensure the image covers the area without stretching */
   border-radius: 10px; /* Adjust the border-radius as needed for rounded corners */
 }
