@@ -935,8 +935,10 @@ h1, h2, h3, h4 {
 
 #eboard .eboard-img figure img {
   margin: 0 auto;
-  width: 100%;
-  height: auto;
+  #width: 100%;
+  #height: auto;
+  width: 150px;
+  height: 150px;
 }
 
 #eboard .eboard-img figure figcaption {
