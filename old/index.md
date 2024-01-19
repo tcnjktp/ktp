@@ -40,4 +40,4 @@ Kappa Theta Pi is recruiting new members this fall and plan to host events that 
 # Connect with us!
 
 Email: ktp@tcnj.edu  
-[Our Instagram](https://instagram.com/ktp_tcnj)
+[Our Instagram](https://instagram.com/ktptcnj)
