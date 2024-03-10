@@ -1075,58 +1075,9 @@ h1, h2, h3, h4 {
   }
 }
 
-/* Active Members Images */
-.active-item .member-img img {
-  width: 100%; /* Make the image fill the container */
-  height: auto; /* Keep the original aspect ratio */
-  border-radius: 8px; /* Rounded corners */
-  display: block; /* Remove any inline spacing */
-  margin-bottom: 8px; /* Space between the image and the text */
-}
-
-.active-item figure, .active-item .member-img {
-  position: relative; /* Needed for absolute positioning of the overlay */
-  overflow: hidden; /* Ensure the border-radius contains the children elements */
-}
-
-.active-item .overlay {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-  color: #f1f1f1;
-  width: 100%;
-  transition: .5s ease;
-  opacity:0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-}
-
-.active-item .member-img:hover .overlay {
-  opacity: 1;
-}
-
-figcaption {
-  background-color: #fff; /* Change if needed */
-  padding: 2px;
-  font-size: 0.9rem;
-  height: auto;
-}
-
-.active-item {
-  margin-bottom: 30px; /* Space between items */
-}
-
-/* Adjustments for screen responsiveness */
-@media (max-width: 767px) {
-  .active-item {
-    margin-bottom: 15px;
-  }
-}
-
 
 /* Old Actives Section
+--------------------------------*/
 #actives {
   padding: 40px 0;
 }
@@ -1211,7 +1162,6 @@ figcaption {
     font-size: 24px;
   }
 }
---------------------------------*/
 /* Alumni Section
 --------------------------------*/
 #alumni {
