@@ -362,7 +362,7 @@ end-->
     </section>
 
 
-   <!-- =======  Actives Section ======= -->           
+<!-- =======  Actives Section ======= -->           
 <section id="actives" class="actives section-bg">
   <header class="section-header">
     <h3>Active Members</h3>
@@ -371,11 +371,10 @@ end-->
     <div class="container" id="memberContainer">
 
         <style>
-          .member-img img {
-              width: 100px; /* You can adjust this value */
-              height: 100px; /* You can adjust this value */
-              border-radius: 50%; /* This will make the image rounded */
-              object-fit: cover; /* This will ensure the image covers the area without losing its aspect ratio */
+          .square-rounded img {
+              width: 100px; /* Define a fixed width */
+              height: 100px; /* Define the same value for height to ensure a square */
+              object-fit: cover; /* Ensures the image covers the square, cropping as needed */
           }
         </style>
 
@@ -414,7 +413,7 @@ end-->
                 var memberGradYear = cols[7];
                 var memberLinkedIn = cols[8];
 
-                document.getElementById("memberRow").innerHTML += "<div class=\"active-item col-4 col-sm-3 col-md-2\"> <div class=\"active-img\"> <figure> <div class=\"member-img\"> <img src=" + memberImage + " class=\"square-rounded\" alt=\"Member Image\"> <div class=\"overlay\"> <a href= \"" + memberLinkedIn + "\"class=\"icon\" title=\"LinkedIn\" target=\"_blank\"> <ion-icon name=\"logo-linkedin\"></ion-icon> </a> <div title=\" " + memberPledgeClass + " \" class=\"text\">" + memberPledgeClass + " | "  + memberGradYear + "</div> </div> </div> <figcaption> " + memberName + "</figcaption> </figure> </div> </div>";
+                document.getElementById("memberRow").innerHTML += "<div class=\"active-item col-4 col-sm-3 col-md-2\"> <div class=\"active-img\"> <figure> <div class=\"square-rounded\"> <img src=" + memberImage + " alt=\"Member Image\"> <div class=\"overlay\"> <a href= \"" + memberLinkedIn + "\"class=\"icon\" title=\"LinkedIn\" target=\"_blank\"> <ion-icon name=\"logo-linkedin\"></ion-icon> </a> <div title=\" " + memberPledgeClass + " \" class=\"text\">" + memberPledgeClass + " | "  + memberGradYear + "</div> </div> </div> <figcaption> " + memberName + "</figcaption> </figure> </div> </div>";
             }
         </script>
     </div>
