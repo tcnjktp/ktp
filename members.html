@@ -370,76 +370,63 @@ end-->
 
     <div class="container" id="memberContainer">
 
-        <style>
-          .square-rounded img {
-              width: 100px; /* Define a fixed width */
-              height: 100px; /* Define the same value for height to ensure a square */
-              object-fit: cover; /* Ensures the image covers the square, cropping as needed */
-          }
-          .active-item {
-              text-align: center; /* Center the text below the image */
-              margin-bottom: 15px; /* Add space below each member item */
-          }
-          
-            .member-img img {
-              width: 150px; /* Set a fixed width for all images */
-              height: 150px; /* Set the height equal to the width to create a square */
-              border-radius: 8px; /* Rounded corners (adjust as needed) */
-              object-fit: cover; /* Ensures the image covers the square */
-              margin-bottom: 8px; /* Adds some space between the image and the text below it */
-           }
-          
-            .figcaption {
-              display: block; /* Make sure the caption is on a new line below the image */
-              background-color: #FFFFFF; /* Change to match your design */
-              padding: 4px 8px; /* Padding inside the text background */
-              box-sizing: border-box; /* Ensures padding is included in width */
-              width: 150px; /* Matches the image width */
-              margin-top: -30px; /* Adjust as needed to move the caption below the image */
-              position: relative; /* Aligns caption with the parent container */
-              z-index: 10; /* Ensures the caption is above the image */
-              font-size: 0.9em; /* Adjust the font size as needed */
-            }
-
-        </style>
-
         <script>
             function loadFile(filePath) {
-                var result = null;
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open("GET", filePath, false);
-                xmlhttp.send();
-                if (xmlhttp.status == 200) {
-                    result = xmlhttp.responseText;
-                }
-                return result;
+              var result = null;
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.open("GET", filePath, false);
+              xmlhttp.send();
+              if (xmlhttp.status == 200) {
+                result = xmlhttp.responseText;
+              }
+              return result;
             }
+            
             //get the file.
             var csv = loadFile("assets/memberList.csv");
             //split and get the rows in an array
             var rows = csv.split('\n');
             //move line by line
             for (var i = 1; i < rows.length -1; i++) {
-                //split by separator (,) and get the columns
-                cols = rows[i].split(',');
-
-                //start of row
-                if(i % 5 == 1) {
-                  document.getElementById("memberContainer").innerHTML += "<div class=\"row\" id=\"memberRow\">";
-                }
-
-                if(i % 5 == 0) {
-                  document.getElementById("memberContainer").innerHTML += "</div>";
-                }
-
-                var memberName = cols[0] + " " + cols[1];
-                var memberImage = cols[5];
-                var memberPledgeClass = cols[6];
-                var memberGradYear = cols[7];
-                var memberLinkedIn = cols[8];
-
-                document.getElementById("memberRow").innerHTML += "<div class=\"active-item col-4 col-sm-3 col-md-2\"> <div class=\"active-img\"> <figure> <div class=\"square-rounded\"> <img src=" + memberImage + " alt=\"Member Image\"> <div class=\"overlay\"> <a href= \"" + memberLinkedIn + "\"class=\"icon\" title=\"LinkedIn\" target=\"_blank\"> <ion-icon name=\"logo-linkedin\"></ion-icon> </a> <div title=\" " + memberPledgeClass + " \" class=\"text\">" + memberPledgeClass + " | "  + memberGradYear + "</div> </div> </div> <figcaption> " + memberName + "</figcaption> </figure> </div> </div>";
+              //split by separator (,) and get the columns
+              cols = rows[i].split(',');
+            
+              // Ensure memberRow is appended correctly within memberContainer
+              var memberContainer = document.getElementById("memberContainer");
+              var newRow = document.createElement('div');
+              newRow.className = "row justify-content-center";
+              memberContainer.appendChild(newRow);
+            
+              var memberName = cols[0] + " " + cols[1];
+              var memberImage = cols[5];
+              var memberPledgeClass = cols[6];
+              var memberGradYear = cols[7];
+              var memberLinkedIn = cols[8];
+            
+              var memberHTML = `
+                <div class="eboard-item col-4 col-sm-3 col-md-2">
+                  <div class="eboard-img">
+                    <figure>
+                      <div class="member-img">
+                        <img src="${memberImage}" alt="${memberName}" class="square-rounded">
+                        <div class="pic-overlay">
+                          <div class="box">
+                            <a class="button" href="${memberLinkedIn}" target="_blank">
+                              <i class="fa fa-external-link fa-3x" aria-hidden="true"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <h4>${memberName}</h4>
+                      <p>${memberPledgeClass} | ${memberGradYear}</p>
+                    </figure>
+                  </div>
+                </div>
+              `;
+            
+              newRow.innerHTML += memberHTML;
             }
+
         </script>
     </div>
 
