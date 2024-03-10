@@ -362,56 +362,64 @@ end-->
     </section>
 
 
-    <!-- =======  Actives Section ======= -->           
-    <section id="actives" class="actives section-bg">
-      <header class="section-header">
-        <h3>Active Members</h3>
-      </header>
+   <!-- =======  Actives Section ======= -->           
+<section id="actives" class="actives section-bg">
+  <header class="section-header">
+    <h3>Active Members</h3>
+  </header>
 
-        <div class="container" id="memberContainer">
+    <div class="container" id="memberContainer">
 
+        <style>
+          .member-img img {
+              width: 100px; /* You can adjust this value */
+              height: 100px; /* You can adjust this value */
+              border-radius: 50%; /* This will make the image rounded */
+              object-fit: cover; /* This will ensure the image covers the area without losing its aspect ratio */
+          }
+        </style>
 
-            <script>
-                function loadFile(filePath) {
-                    var result = null;
-                    var xmlhttp = new XMLHttpRequest();
-                    xmlhttp.open("GET", filePath, false);
-                    xmlhttp.send();
-                    if (xmlhttp.status == 200) {
-                        result = xmlhttp.responseText;
-                    }
-                    return result;
+        <script>
+            function loadFile(filePath) {
+                var result = null;
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", filePath, false);
+                xmlhttp.send();
+                if (xmlhttp.status == 200) {
+                    result = xmlhttp.responseText;
                 }
-                //get the file.
-                var csv = loadFile("assets/memberList.csv");
-                //split and get the rows in an array
-                var rows = csv.split('\n');
-                //move line by line
-                for (var i = 1; i < rows.length -1; i++) {
-                    //split by separator (,) and get the columns
-                    cols = rows[i].split(',');
+                return result;
+            }
+            //get the file.
+            var csv = loadFile("assets/memberList.csv");
+            //split and get the rows in an array
+            var rows = csv.split('\n');
+            //move line by line
+            for (var i = 1; i < rows.length -1; i++) {
+                //split by separator (,) and get the columns
+                cols = rows[i].split(',');
 
-                    //start of row
-                    if(i % 5 == 1) {
-                      document.getElementById("memberContainer").innerHTML += "<div class=\"row\" id=\"memberRow\">";
-                    }
-
-                    if(i % 5 == 0) {
-                      document.getElementById("memberContainer").innerHTML += "</div>";
-                    }
-
-                    var memberName = cols[0] + " " + cols[1];
-                    var memberImage = cols[5];
-                    var memberPledgeClass = cols[6];
-                    var memberGradYear = cols[7];
-                    var memberLinkedIn = cols[8];
-
-                    document.getElementById("memberRow").innerHTML += "<div class=\"active-item col-4 col-sm-3 col-md-2\"> <div class=\"active-img\"> <figure> <div class=\"member-img\"> <img src=" + memberImage + " class=\"square-rounded\"> <div class=\"overlay\"> <a href= \"" + memberLinkedIn + "\"class=\"icon\" title=\"LinkedIn\" target=\"_blank\"> <ion-icon name=\"logo-linkedin\"></ion-icon> </a> <div title=\" " + memberPledgeClass + " \" class=\"text\">&" + memberPledgeClass + "; | "  + memberGradYear + "</div> </div> </div> <figcaption> " + memberName + "</figcaption> </figure> </div> </div>";
+                //start of row
+                if(i % 5 == 1) {
+                  document.getElementById("memberContainer").innerHTML += "<div class=\"row\" id=\"memberRow\">";
                 }
-            </script>
-        </div>
 
-      </section>
+                if(i % 5 == 0) {
+                  document.getElementById("memberContainer").innerHTML += "</div>";
+                }
+
+                var memberName = cols[0] + " " + cols[1];
+                var memberImage = cols[5];
+                var memberPledgeClass = cols[6];
+                var memberGradYear = cols[7];
+                var memberLinkedIn = cols[8];
+
+                document.getElementById("memberRow").innerHTML += "<div class=\"active-item col-4 col-sm-3 col-md-2\"> <div class=\"active-img\"> <figure> <div class=\"member-img\"> <img src=" + memberImage + " class=\"square-rounded\" alt=\"Member Image\"> <div class=\"overlay\"> <a href= \"" + memberLinkedIn + "\"class=\"icon\" title=\"LinkedIn\" target=\"_blank\"> <ion-icon name=\"logo-linkedin\"></ion-icon> </a> <div title=\" " + memberPledgeClass + " \" class=\"text\">" + memberPledgeClass + " | "  + memberGradYear + "</div> </div> </div> <figcaption> " + memberName + "</figcaption> </figure> </div> </div>";
+            }
+        </script>
+    </div>
+
+  </section>
 
 
 
