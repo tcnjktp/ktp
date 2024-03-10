@@ -1077,47 +1077,63 @@ h1, h2, h3, h4 {
   }
 }
 
-/* Active Members Images to match EBoard Section */
-.active-item .member-img img {
-  width: 150px; /* Fixed width to match eboard images */
-  height: 150px; /* Fixed height to match eboard images */
-  border-radius: 8px; /* Rounded corners as per eboard */
-  object-fit: cover; /* This will make sure to cover the area, useful if images are not square */
-  display: block; /* To remove any inline spacing */
-  margin: 0 auto; /* Center the images horizontally */
-}
-
-.active-item {
+/* Active Members Images  */
+#actives .eboard-item {
+  width: 20%;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.5rem;
-  margin-bottom: 1rem; /* Adjust the bottom margin as needed */
 }
 
-.active-item .overlay {
+#actives .eboard-img figure img {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#actives .eboard-img figure figcaption {
+  text-align: center;
+}
+
+#actives .pic-overlay {
   position: absolute;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--primary-dark); /* Semi-transparent overlay color */
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: var(--primary-dark);
+}
+
+#actives .eboard-item:hover .pic-overlay {
+  opacity: 0.8;
+}
+
+#actives .icon {
   color: white;
-  opacity: 0; /* Hidden by default */
-  transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
-.active-item:hover .overlay {
-  opacity: 0.8; /* Show overlay on hover */
+#actives .text {
+  font-family: var(--font-title);
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-.active-item figcaption {
-  text-align: center;
-  color: #696592; /* Color to match eboard */
-  font-family: var(--font-body);
-  font-weight: bold;
-  font-size: 18px;
-  margin: 8px 0 0; /* Adjust top margin to position caption below the image */
-}
 
 
 /* Old Actives Section
