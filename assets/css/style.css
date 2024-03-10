@@ -1077,55 +1077,48 @@ h1, h2, h3, h4 {
   }
 }
 
-/* Active Members Images */
+/* Active Members Images to match EBoard Section */
 .active-item .member-img img {
-  width: 100%; /* Make the image fill the container */
-  height: auto; /* Keep the original aspect ratio */
-  border-radius: 8px; /* Rounded corners */
-  display: block; /* Remove any inline spacing */
-  margin-bottom: 8px; /* Space between the image and the text */
+  width: 150px; /* Fixed width to match eboard images */
+  height: 150px; /* Fixed height to match eboard images */
+  border-radius: 8px; /* Rounded corners as per eboard */
+  object-fit: cover; /* This will make sure to cover the area, useful if images are not square */
+  display: block; /* To remove any inline spacing */
+  margin: 0 auto; /* Center the images horizontally */
 }
 
-.active-item figure, .active-item .member-img {
-  position: relative; /* Needed for absolute positioning of the overlay */
-  overflow: hidden; /* Ensure the border-radius contains the children elements */
+.active-item {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  margin-bottom: 1rem; /* Adjust the bottom margin as needed */
 }
 
 .active-item .overlay {
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-  color: #f1f1f1;
-  width: 100%;
-  transition: .5s ease;
-  opacity:0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-dark); /* Semi-transparent overlay color */
   color: white;
-  font-size: 20px;
-  padding: 20px;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
   text-align: center;
 }
 
-.active-item .member-img:hover .overlay {
-  opacity: 1;
+.active-item:hover .overlay {
+  opacity: 0.8; /* Show overlay on hover */
 }
 
-figcaption {
-  background-color: #fff; /* Change if needed */
-  padding: 2px;
-  font-size: 0.9rem;
-  height: auto;
+.active-item figcaption {
+  text-align: center;
+  color: #696592; /* Color to match eboard */
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 18px;
+  margin: 8px 0 0; /* Adjust top margin to position caption below the image */
 }
 
-.active-item {
-  margin-bottom: 30px; /* Space between items */
-}
-
-/* Adjustments for screen responsiveness */
-@media (max-width: 767px) {
-  .active-item {
-    margin-bottom: 15px;
-  }
-}
 
 /* Old Actives Section
 #actives {
