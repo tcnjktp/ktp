@@ -1134,6 +1134,27 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
+#actives .active-item h4 {
+  color: #696592;
+  font-family: var(--font-body);
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px; /* Same size as eboard h4 */
+  margin-bottom: 0; /* Same as eboard */
+}
+
+#actives .active-item p {
+  font-family: var(--font-body);
+  text-align: center;
+  font-size: 16px; /* Same size as eboard p */
+}
+
+/* Ensure that the figcaption also matches the eboard-item text size if used */
+#actives .active-item figcaption {
+  font-size: 16px; /* Adjust this value to match eboard text size */
+  text-align: center;
+}
+
 
 
 /* Old Actives Section
