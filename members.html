@@ -371,61 +371,61 @@ end-->
     <div class="container" id="memberContainer">
 
         <script>
-            function loadFile(filePath) {
-              var result = null;
-              var xmlhttp = new XMLHttpRequest();
-              xmlhttp.open("GET", filePath, false);
-              xmlhttp.send();
-              if (xmlhttp.status == 200) {
-                result = xmlhttp.responseText;
-              }
-              return result;
+          function loadFile(filePath) {
+            var result = null;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", filePath, false);
+            xmlhttp.send();
+            if (xmlhttp.status == 200) {
+              result = xmlhttp.responseText;
             }
-            
-            //get the file.
-            var csv = loadFile("assets/memberList.csv");
-            //split and get the rows in an array
-            var rows = csv.split('\n');
-            //move line by line
-            for (var i = 1; i < rows.length -1; i++) {
-              //split by separator (,) and get the columns
-              cols = rows[i].split(',');
-            
-              // Ensure memberRow is appended correctly within memberContainer
-              var memberContainer = document.getElementById("memberContainer");
-              var newRow = document.createElement('div');
-              newRow.className = "row justify-content-center";
-              memberContainer.appendChild(newRow);
-            
-              var memberName = cols[0] + " " + cols[1];
-              var memberImage = cols[5];
-              var memberPledgeClass = cols[6];
-              var memberGradYear = cols[7];
-              var memberLinkedIn = cols[8];
-            
-              var memberHTML = `
-                <div class="eboard-item col-4 col-sm-3 col-md-2">
-                  <div class="eboard-img">
-                    <figure>
-                      <div class="member-img">
-                        <img src="${memberImage}" alt="${memberName}" class="square-rounded">
-                        <div class="pic-overlay">
-                          <div class="box">
-                            <a class="button" href="${memberLinkedIn}" target="_blank">
-                              <i class="fa fa-external-link fa-3x" aria-hidden="true"></i>
-                            </a>
-                          </div>
+            return result;
+          }
+          
+          var csv = loadFile("assets/memberList.csv");
+          var rows = csv.split('\n');
+          var memberContainer = document.getElementById("memberContainer");
+          
+          // Add a row outside the loop so we don't create a new row for each member
+          var newRow = document.createElement('div');
+          newRow.className = "row justify-content-center";
+          memberContainer.appendChild(newRow);
+          
+          for (var i = 1; i < rows.length - 1; i++) {
+            var cols = rows[i].split(',');
+          
+            var memberName = cols[0] + " " + cols[1];
+            var memberImage = cols[5];
+            var memberPledgeClass = cols[6];
+            var memberGradYear = cols[7];
+            var memberLinkedIn = cols[8];
+          
+            // Create the HTML for each member using Bootstrap classes for a responsive layout
+            var memberHTML = `
+              <div class="eboard-item col-4 col-sm-3 col-md-2">
+                <div class="eboard-img">
+                  <figure>
+                    <div class="member-img">
+                      <img src="${memberImage}" alt="${memberName}" class="square-rounded">
+                      <div class="pic-overlay">
+                        <div class="box">
+                          <a class="button" href="${memberLinkedIn}" target="_blank">
+                            <i class="fa fa-external-link fa-3x" aria-hidden="true"></i>
+                          </a>
                         </div>
                       </div>
-                      <h4>${memberName}</h4>
-                      <p>${memberPledgeClass} | ${memberGradYear}</p>
-                    </figure>
-                  </div>
+                    </div>
+                    <h4>${memberName}</h4>
+                    <p>${memberPledgeClass} | ${memberGradYear}</p>
+                  </figure>
                 </div>
-              `;
-            
-              newRow.innerHTML += memberHTML;
-            }
+              </div>
+            `;
+          
+            // Add the member HTML to the newRow
+            newRow.innerHTML += memberHTML;
+          }
+
 
         </script>
     </div>
