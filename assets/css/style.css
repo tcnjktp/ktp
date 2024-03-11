@@ -811,7 +811,7 @@ h1, h2, h3, h4 {
 }
 
 
-.video-container iframe {
+.video-container iframe { 
   position: absolute;
   top: 0;
   left: 0;
