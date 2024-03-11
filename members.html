@@ -385,32 +385,28 @@ end-->
           var csv = loadFile("assets/memberList.csv");
           var rows = csv.split('\n');
           var memberContainer = document.getElementById("memberContainer");
-          
-          // Add a row outside the loop so we don't create a new row for each member
           var newRow = document.createElement('div');
           newRow.className = "row justify-content-center";
           memberContainer.appendChild(newRow);
           
           for (var i = 1; i < rows.length - 1; i++) {
             var cols = rows[i].split(',');
-          
             var memberName = cols[0] + " " + cols[1];
             var memberImage = cols[5];
             var memberPledgeClass = cols[6];
             var memberGradYear = cols[7];
             var memberLinkedIn = cols[8];
           
-            // Create the HTML for each member using Bootstrap classes for a responsive layout
             var memberHTML = `
-              <div class="active-item col-4 col-sm-3 col-md-2">
+              <div class="eboard-item col-4 col-sm-3 col-md-2">
                 <div class="eboard-img">
                   <figure>
                     <div class="member-img">
                       <img src="${memberImage}" alt="${memberName}" class="square-rounded">
                       <div class="pic-overlay">
                         <div class="box">
-                          <a class="button" href="${memberLinkedIn}" target="_blank">
-                            <i class="fa fa-external-link fa-3x" aria-hidden="true"></i>
+                          <a class="button" href="${memberLinkedIn}" target="_blank" title="LinkedIn">
+                            <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
                           </a>
                         </div>
                       </div>
@@ -422,10 +418,8 @@ end-->
               </div>
             `;
           
-            // Add the member HTML to the newRow
             newRow.innerHTML += memberHTML;
           }
-
 
         </script>
     </div>
