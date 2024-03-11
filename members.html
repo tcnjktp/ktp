@@ -408,15 +408,16 @@ end-->
                           <a class="button" href="${memberLinkedIn}" target="_blank" title="LinkedIn">
                             <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
                           </a>
+                          <p class="overlay-text">${memberPledgeClass} | ${memberGradYear}</p>
                         </div>
                       </div>
                     </div>
                     <h4>${memberName}</h4>
-                    <p>${memberPledgeClass} | ${memberGradYear}</p>
                   </figure>
                 </div>
               </div>
             `;
+
           
             newRow.innerHTML += memberHTML;
           }
