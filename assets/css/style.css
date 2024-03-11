@@ -1084,6 +1084,12 @@ h1, h2, h3, h4 {
   padding-right: 0.5rem;
   padding-top: 0.5rem;
 }
+#actives .active-item {
+  width: 20%; /* Maintain item width for grid */
+  margin: 0.5rem; /* Adjust margin as needed for spacing */
+  position: relative; /* Needed for absolute positioning of children */
+  padding-top: 0.5rem; /* Space on top */
+}
 
 #actives .eboard-img figure img {
   margin: 0 auto;
@@ -1119,6 +1125,8 @@ h1, h2, h3, h4 {
   color: white;
   text-align: center;
   display: none; /* Hide text by default */
+  margin: 0; /* Remove default margin */
+  padding: 10px; /* Padding inside overlay for text */
 }
 
 #actives .active-item:hover .overlay-text {
@@ -1167,10 +1175,17 @@ h1, h2, h3, h4 {
 }
 
 #actives .active-item .eboard-img {
-  position: relative;
-  width: 150px; /* Same as the image */
-  height: 150px; /* Same as the image */
+  width: 150px; /* Image width, matching overlay size */
+  height: 150px; /* Image height, matching overlay size */
+  margin: auto; /* Center in the column space */
 }
+
+#actives .active-item .member-img img {
+  width: 100%; /* Full width of the parent .eboard-img */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+}
+
 
 
 
