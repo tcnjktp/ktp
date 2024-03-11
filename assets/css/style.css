@@ -909,14 +909,12 @@ h1, h2, h3, h4 {
   text-align: center;
   font-size: 18px;
   margin-bottom: 0px;
-  margin: 0 auto;
 }
 
 #eboard p {
   font-family: var(--font-body);
   text-align: center;
   font-size: 16px;
-  margin: 0 auto;
 }
 
 
@@ -953,16 +951,14 @@ h1, h2, h3, h4 {
 #eboard .pic-overlay {
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
-  width: 150px;  /* Match the image width */
-  height: 150px; /* Match the image height */
-  opacity: 0; /* Invisible by default */
+  right: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
   transition: .3s ease;
   background-color: var(--primary-dark);
-}
-
-#eboard .member-img:hover .pic-overlay {
-  opacity: 0.8; /* Becomes visible on hover, new thing */
 }
 
 
