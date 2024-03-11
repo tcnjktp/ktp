@@ -1086,9 +1086,10 @@ h1, h2, h3, h4 {
 }
 #actives .active-item {
   width: 20%; /* Maintain item width for grid */
-  margin: 0.5rem; /* Adjust margin as needed for spacing */
+  margin: 0.5rem; /* margin spacing */
   position: relative; /* Needed for absolute positioning of children */
   padding-top: 0.5rem; /* Space on top */
+  padding-bottom: 0.5rem;
 }
 
 #actives .eboard-img figure img {
