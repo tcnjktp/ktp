@@ -1097,7 +1097,7 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-#actives .pic-overlay {
+#actives .active-item .pic-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1110,7 +1110,7 @@ h1, h2, h3, h4 {
   background-color: var(--primary-dark);
 }
 
-#actives .eboard-item:hover .pic-overlay {
+#actives .active-item:hover .pic-overlay {
   opacity: 0.8;
 }
 
@@ -1123,7 +1123,7 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-#actives .text {
+#actives .active-item .icon {
   font-family: var(--font-title);
   color: white;
   font-size: 20px;
@@ -1154,6 +1154,8 @@ h1, h2, h3, h4 {
   font-size: 16px; /* Adjust this value to match eboard text size */
   text-align: center;
 }
+
+
 
 
 
