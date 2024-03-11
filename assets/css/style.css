@@ -1082,7 +1082,7 @@ h1, h2, h3, h4 {
   width: 20%;
   margin: 0.5rem; /* Spacing around each item */
   padding-top: 0.5rem; /* Space above the item */
-  padding-bottom: 0.5rem; /* Space below the item, only affects spacing, not size */
+  padding-bottom: 1rem; /* Space below the item, only affects spacing, not size */
   position: relative; /* Necessary for positioning children absolutely */
 }
 
@@ -1090,6 +1090,7 @@ h1, h2, h3, h4 {
   width: 150px;  /* Explicit width for the image container */
   height: 150px; /* Explicit height for the image container */
   margin: auto;  /* Centers the image container within the column */
+  margin-bottom: 20px;
   position: relative; /* Context for positioning the overlay */
 }
 
