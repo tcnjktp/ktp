@@ -1077,39 +1077,35 @@ h1, h2, h3, h4 {
   }
 }
 
-/* Active Members Images  */
-#actives .eboard-item {
-  width: 20%;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.5rem;
-}
+/* Active Members Items */
 #actives .active-item {
-  width: 20%; /* Maintain item width for grid */
-  margin: 0.5rem; /* margin spacing */
-  position: relative; /* Needed for absolute positioning of children */
-  padding-top: 0.5rem; /* Space on top */
-  padding-bottom: 0.5rem;
+  width: 20%;
+  margin: 0.5rem; /* Maintain spacing around items */
+  padding-top: 0.5rem; /* Space above items */
+  padding-bottom: 0.5rem; /* Space below items */
+  position: relative; /* For absolute positioning of children */
 }
 
-#actives .eboard-img figure img {
-  margin: 0 auto;
-  width: 150px;
-  height: 150px;
-  border-radius: 8px;
-  object-fit: cover;
+#actives .active-item .eboard-img {
+  width: 150px;  /* Width to match image */
+  height: 150px; /* Height to match image */
+  margin: auto;  /* Centering */
+  position: relative; /* For overlay positioning */
 }
 
-#actives .eboard-img figure figcaption {
-  text-align: center;
+#actives .active-item .eboard-img img {
+  width: 100%;  /* Full width of the parent */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  object-fit: cover; /* Ensure image covers the area */
 }
 
 #actives .active-item .pic-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Full width of the parent */
-  height: 100%; /* Full height of the parent */
+  width: 100%;
+  height: 100%;
   background-color: var(--primary-dark);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -1125,67 +1121,39 @@ h1, h2, h3, h4 {
 #actives .active-item .overlay-text {
   color: white;
   text-align: center;
-  display: none; /* Hide text by default */
-  margin: 0; /* Remove default margin */
-  padding: 10px; /* Padding inside overlay for text */
+  display: none;  /* Only show on hover */
+  padding: 10px;
 }
 
 #actives .active-item:hover .overlay-text {
-  display: block; /* Show text on hover */
-}
-
-#actives .icon {
-  color: white;
-  position: absolute;
-  bottom: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  display: block;
 }
 
 #actives .active-item .icon {
-  font-family: var(--font-title);
   color: white;
-  font-size: 20px;
   position: absolute;
-  top: 40%;
-  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
 
+#actives .active-item h4, #actives .active-item p {
+  text-align: center;
+  margin: 0; /* No margin to avoid unnecessary spacing */
+}
+
+/* Specific text styles for name and details */
 #actives .active-item h4 {
   color: #696592;
   font-family: var(--font-body);
   font-weight: bold;
-  text-align: center;
-  font-size: 18px; /* Same size as eboard h4 */
-  margin-bottom: 0; /* Same as eboard */
+  font-size: 18px;
 }
 
 #actives .active-item p {
   font-family: var(--font-body);
-  text-align: center;
-  font-size: 16px; /* Same size as eboard p */
+  font-size: 16px;
 }
 
-/* Ensure that the figcaption also matches the eboard-item text size if used */
-#actives .active-item figcaption {
-  font-size: 16px; /* Adjust this value to match eboard text size */
-  text-align: center;
-}
-
-#actives .active-item .eboard-img {
-  width: 150px; /* Image width, matching overlay size */
-  height: 150px; /* Image height, matching overlay size */
-  margin: auto; /* Center in the column space */
-}
-
-#actives .active-item .member-img img {
-  width: 100%; /* Full width of the parent .eboard-img */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Rounded corners */
-}
 
 
 
