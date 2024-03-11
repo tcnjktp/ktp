@@ -947,17 +947,15 @@ h1, h2, h3, h4 {
 }
 
 #eboard .pic-overlay {
-  position: absolute;
+  width: 150px;  /* Match the image width */
+  height: 150px; /* Match the image height */
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
-  width: 100%;
-  height: auto;
-  opacity: 0;
+  position: absolute;
   transition: .3s ease;
   background-color: var(--primary-dark);
 }
+
 
 #eboard .eboard-item:hover .pic-overlay {
   opacity: 0.8;
